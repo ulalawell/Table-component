@@ -1,0 +1,122 @@
+
+body {
+    font-family: 'open sans', sans-serif;
+    font-size: 16px;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+}
+
+.container-loader {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.container-table {
+    table-layout: fixed;
+    width: 100%;
+    height: 100%;
+    border-collapse: collapse;
+}
+
+.container-input {
+    width: 100%;
+    margin-top: 15px;
+    margin-bottom: 5px;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    background-color: white;
+    background-image: url('../images/search_icon.png');
+    background-position: 10px 10px;
+    background-repeat: no-repeat;
+    padding: 12px 20px 12px 40px;
+}
+
+table, td {
+    height: 100%;
+    width: 100%;
+}
+
+
+thead th {
+    text-align: left;
+    border-bottom: 2px solid black;
+}
+
+thead button {
+    border: 0;
+    font-family: inherit;
+    font-weight: 700;
+    font-size: inherit;
+    padding: 0.5em;
+    margin-bottom: 1px;
+}
+
+thead button.ascending::after {
+    content: '⇧';
+    display: inline-block;
+    margin-left: 1em;
+}
+
+thead button.descending::after {
+    content: '⇩';
+    display: inline-block;
+    margin-left: 1em;
+}
+
+tbody td {
+    padding: 0.5em;
+    border: 1px solid #ccc;
+}
+
+tbody tr:hover {
+    background-color: #eee;
+}
+
+
+.App {
+    font-family: sans-serif;
+    text-align: center;
+}
+
+.mymodal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    border: 1px solid #ccc;
+    background: #fff;
+    overflow: auto;
+    border-radius: 4px;
+    outline: none;
+    padding: 20px;
+}
+
+.myoverlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.75);
+}
+
+.ReactModal__Overlay {
+    opacity: 0;
+    transition: opacity 500ms ease-in-out;
+}
+
+.ReactModal__Overlay--after-open {
+    opacity: 1;
+}
+
+.ReactModal__Overlay--before-close {
+    opacity: 0;
+}
